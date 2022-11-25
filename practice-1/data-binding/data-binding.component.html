@@ -1,0 +1,23 @@
+
+<div>
+<img [src]="imgUrl" alt="">
+<button (click)="click()">click</button>
+
+<img [src]="imgurl1" alt="" [ngClass]="raj ? 'image' : 'image1'">
+
+</div>
+
+<div class="container mt-3">
+     <input type="text" [(ngModel)]="new1">
+</div>
+{{new1}}
+
+<div class="container">
+    <div [ngStyle]="hello"> Hello this is from NgStyle</div>
+</div>
+
+<input appCusHighlighter type="text" #hello1>
+<button class="btn btn-success" (click)="submit(hello1.value)">Template-ref</button>
+{{hello1.value}}----------{{b}}
+
+<p appCusHighlighter>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, rerum?</p>

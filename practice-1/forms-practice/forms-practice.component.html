@@ -1,0 +1,15 @@
+
+<!-- <form #loginform="ngForm" (ngSubmit)="submit(loginform.value)">
+    <label for="">Username</label> <input type="text" name="name" ngModel><br>
+    <label for="">Password</label> <input type="text" name="password" ngModel><br>
+
+    <button type="submit">Submit</button>
+</form>
+{{name}} ------{{pass}} -->
+
+
+<label [ngStyle]="isapply">User Name</label> <input type="text" [formControl]="username">
+<button (click)="click()">Click Me</button>
+<button (click)="update()">Update</button>
+{{a}}
+<p [ngStyle]="isapply">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ipsum!</p>

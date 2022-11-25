@@ -1,0 +1,32 @@
+<div class="container fstyle card">
+<form [formGroup]="profile" appCusHighlighter>
+    <div class="form-group">
+        <label for="exampleInputEmail1" appCusHighlighter>First Name</label>
+        <input appCusHighlighter type="email" formControlName="firstname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Last Name</label>
+        <input appCusHighlighter type="text"  formControlName="lastname" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div formGroupName = "adress">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Street</label>
+        <input type="email" formControlName="street" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label  for="exampleInputEmail1">State</label>
+        <input type="email" formControlName="state" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+    </div>
+</div>
+    <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+</form>
+</div>
+<button (click)="update()">Update</button>
+
+<div *ngFor="let item of userprofile">
+    {{item.firstname}} {{item.lastname}} - {{item.street}} - {{item.state}}
+    <button class="btn btn-danger" (click)="update()">Update</button>
+</div>

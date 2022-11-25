@@ -1,0 +1,27 @@
+
+<div class="container">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Email ID</th>
+        <th>Password</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data index as i">
+        <td>{{item.email}}</td>
+        <td>{{item.password}}</td>
+        <td><button class="btn btn-success" (click)="edit(item)">Edit</button></td>
+      </tr>
+    </tbody>
+</table>
+
+
+<form [formGroup]="profile">
+    <label>Email Id</label> <input type="text" formControlName = "email"> &nbsp;
+    <label>Password</label><input type="password" formControlName="password"><br>
+    <button class="btn btn-primary mt-2 me-2 align-item-center" (click)="submit()">Submit</button>
+    <button class="btn btn-success mt-2" (click)="update()">Update</button>
+</form>
+</div>

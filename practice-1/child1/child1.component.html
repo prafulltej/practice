@@ -1,0 +1,7 @@
+<h1>child</h1>
+
+<div *ngFor="let item of parentMessage">
+    {{item.srno}} -- {{item.name}}
+</div>
+
+<button class="btn btn-info" (click)="send()">from child</button>

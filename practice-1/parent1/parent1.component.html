@@ -1,0 +1,14 @@
+<h1>parent</h1>
+<app-child1 [parentMessage]="hi" (childmessage)="message($event)" (second)="hello($event)"></app-child1>
+
+<button (click)="data()">click me</button>
+
+<div *ngFor="let item of bb">
+
+    {{item.srno}} -- {{item.name}}
+</div>
+<button class="btn btn-danger" (click)="hello1()">child message1</button>
+
+<!-- <h1>{{dd}}</h1> -->
+
+<h2>{{ee}}</h2>
